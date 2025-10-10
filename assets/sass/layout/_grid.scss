@@ -1,0 +1,12 @@
+
+.row{
+
+    display: flex;
+}
+
+.col-3{
+
+    width:calc(100% * 3/12);
+
+    flex : 0 0 calc(100% * 3/12);
+}
