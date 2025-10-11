@@ -14,9 +14,35 @@ body {
   line-height: 1.5rem;
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
-  padding: 3rem;
+  padding: 2rem;
 }
 
+@keyframes moveInleft {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  75% {
+    transform: translateX(30px);
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+@keyframes moveInright {
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  75% {
+    transform: translateX(-30px);
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
 .row {
   display: flex;
 }
@@ -24,6 +50,61 @@ body {
 .col-3 {
   width: 25%;
   flex: 0 0 25%;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 106, 0.8), rgba(40, 180, 133, 0.8)), url(../images/hero.jpg);
+  background-size: 100% 100%;
+  clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+  position: relative;
+  height: 90vh;
+}
+.header .logo {
+  position: absolute;
+  left: 40px;
+  top: 40px;
+  display: inline-block;
+  width: 75px;
+}
+.header .logo img {
+  width: 100%;
+}
+.header-primary {
+  font-size: 60px;
+  font-weight: 200;
+  letter-spacing: 20px;
+  color: #fff;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  animation: moveInleft 1s ease-out;
+}
+.header-secondary {
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 15px;
+  color: #fff;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  animation: moveInright 1s ease-in-out;
+}
+
+.header-btn {
+  padding: 15px 40px;
+  text-transform: uppercase;
+  font-size: 16px;
+  border-radius: 100px;
+  cursor: pointer;
+  display: inline-block;
+  transition: all 0.5s ease-in-out;
+  color: #777;
+  border: 0;
+}
+.header-btn:is(:active, :focus, :hover) {
+  transform: scale(1.2);
 }
 
 /*# sourceMappingURL=style.css.map */
