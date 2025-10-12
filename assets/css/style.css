@@ -114,10 +114,6 @@ body {
   .header-secondary {
     letter-spacing: 5px;
   }
-  .header-btn {
-    padding: 15px 20px;
-    font-size: 10px;
-  }
 }
 .btn {
   padding: 15px 40px;
@@ -132,7 +128,7 @@ body {
   position: relative;
 }
 .btn:is(:active, :focus, :hover) {
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 .btn::after {
   content: "";
@@ -150,6 +146,13 @@ body {
 .btn:hover::after {
   transform: scaleX(1.4) scaley(1.6);
   opacity: 0;
+}
+
+@media all and (max-width: 768px) {
+  .btn {
+    padding: 15px 20px;
+    font-size: 10px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

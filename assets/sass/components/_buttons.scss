@@ -40,3 +40,13 @@
   transform: scaleX(1.4) scaley(1.6);
   opacity: 0;
 }
+
+
+@media all and (max-width: 768px) {
+
+   .btn{
+
+        padding: 15px 20px;
+        font-size: 10px;
+  }
+}
