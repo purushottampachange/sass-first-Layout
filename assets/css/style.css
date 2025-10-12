@@ -5,6 +5,11 @@
   box-sizing: border-box;
 }
 
+.container {
+  width: 100%;
+  max-width: 1180px;
+}
+
 html {
   font-size: 16px;
 }
@@ -43,6 +48,10 @@ body {
     opacity: 1;
   }
 }
+.text-center {
+  text-align: center;
+}
+
 .row {
   display: flex;
 }
@@ -74,7 +83,7 @@ body {
   width: 100%;
 }
 .header-primary {
-  font-size: 60px;
+  font-size: 40px;
   font-weight: 200;
   letter-spacing: 20px;
   color: #fff;
@@ -92,7 +101,25 @@ body {
   animation: moveInright 1s ease-in-out;
 }
 
-.header-btn {
+@media all and (max-width: 768px) {
+  .header-primary {
+    letter-spacing: 10px;
+    font-size: 30px;
+  }
+  .header .logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+  }
+  .header-secondary {
+    letter-spacing: 5px;
+  }
+  .header-btn {
+    padding: 15px 20px;
+    font-size: 10px;
+  }
+}
+.btn {
   padding: 15px 40px;
   text-transform: uppercase;
   font-size: 16px;
@@ -102,9 +129,27 @@ body {
   transition: all 0.5s ease-in-out;
   color: #777;
   border: 0;
+  position: relative;
 }
-.header-btn:is(:active, :focus, :hover) {
+.btn:is(:active, :focus, :hover) {
   transform: scale(1.2);
+}
+.btn::after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  border-radius: 100px;
+  transition: all 0.4s ease-in-out;
+  background-color: inherit;
+}
+
+.btn:hover::after {
+  transform: scaleX(1.4) scaley(1.6);
+  opacity: 0;
 }
 
 /*# sourceMappingURL=style.css.map */

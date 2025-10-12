@@ -1,4 +1,4 @@
-.header-btn{
+.btn{
 
    padding: 15px 40px;
    text-transform:uppercase ;
@@ -9,10 +9,34 @@
    transition: all .5s ease-in-out;
    color: #777;
    border: 0;
+   position: relative;
+   
 
    &:is(:active,:focus,:hover){
 
         transform: scale(1.2);
+
+      
    }
 
+   &::after {
+   content: "";
+//   background-color:white;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  border-radius: 100px;
+  transition: all 0.4s ease-in-out;
+  background-color: inherit;
+}
+
+
+}
+
+  .btn:hover::after {
+  transform: scaleX(1.4) scaley(1.6);
+  opacity: 0;
 }
