@@ -1,0 +1,20 @@
+.features-box{
+
+    background-color: rgba($color: white, $alpha: .8);
+    text-align: center;
+    padding: 25px;
+    border-radius: 3px;
+    box-shadow: 0 15px 40px rgb($color-dark, .2);
+    transition: all .3s ease-in-out;
+
+    &:is(:hover,:active,:focus){
+
+        transform: scale(1.05) translateY(-15px);
+    }
+
+    >i{
+
+        font-size: 60px;
+        @include bgbutton;
+    }
+}
