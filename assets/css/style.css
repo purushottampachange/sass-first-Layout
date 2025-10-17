@@ -1,17 +1,431 @@
-/* Error: Can't find stylesheet to import.
- *    ,
- * 21 | @import "./components/tours-card"
- *    |         ^^^^^^^^^^^^^^^^^^^^^^^^^
- *    '
- *   assets\sass\style.scss 21:9  root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Can't find stylesheet to import.\a    \2577 \a 21 \2502  @import \"./components/tours-card\"\d\a    \2502          ^^^^^^^^^^^^^^^^^^^^^^^^^\a    \2575 \a   assets\\sass\\style.scss 21:9  root stylesheet";
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+*, ::after, ::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
+
+.container {
+  width: 100%;
+  max-width: 1180px;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-weight: 400px;
+  line-height: 1.5rem;
+  font-family: "Roboto", sans-serif;
+  font-size: 1rem;
+  padding: 2rem;
+}
+
+@keyframes moveInleft {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  75% {
+    transform: translateX(30px);
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+@keyframes moveInright {
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  75% {
+    transform: translateX(-30px);
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+.primary-heading {
+  font-size: 30px;
+  text-transform: uppercase;
+  font-weight: 700;
+  background-image: linear-gradient(to right, #7ed56a, rgba(40, 180, 133, 0.8));
+  background-clip: text;
+  color: transparent;
+  padding: 10px;
+  margin-bottom: 80px;
+  transition: all 0.4s ease-in-out;
+}
+.primary-heading:is(:hover, :focus, :active) {
+  transform: scale(1.1);
+  text-shadow: 5px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.secondary-heading {
+  font-size: 16px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.para {
+  font-size: 16px;
+}
+.para:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+[class^=col-] {
+  padding: 0 15px;
+}
+
+.col-3 {
+  width: 25%;
+  flex: 0 0 25%;
+}
+
+.col-4 {
+  width: 33.3333333333%;
+  flex: 0 0 33.3333333333%;
+}
+
+.col-6 {
+  width: 50%;
+  flex: 0 0 50%;
+}
+
+.col-12 {
+  width: 100%;
+  flex: 0 0 100%;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 106, 0.8), rgba(40, 180, 133, 0.8)), url(../images/hero.jpg);
+  background-size: 100% 100%;
+  clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+  position: relative;
+  height: 90vh;
+}
+.header .logo {
+  position: absolute;
+  left: 40px;
+  top: 40px;
+  display: inline-block;
+  width: 75px;
+}
+.header .logo img {
+  width: 100%;
+}
+.header-primary {
+  font-size: 40px;
+  font-weight: 200;
+  letter-spacing: 20px;
+  color: #fff;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  animation: moveInleft 1s ease-out;
+}
+.header-secondary {
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 15px;
+  color: #fff;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  animation: moveInright 1s ease-in-out;
+}
+
+@media all and (max-width: 768px) {
+  .header-primary {
+    letter-spacing: 10px;
+    font-size: 30px;
+  }
+  .header .logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+  }
+  .header-secondary {
+    letter-spacing: 5px;
+  }
+}
+.imgsec {
+  background-color: #f7f7f7;
+  padding: 250px 0 150px;
+  margin-top: -180px;
+}
+
+.section-features {
+  padding: 200px 0;
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 106, 0.8), rgba(126, 213, 106, 0.8)), url(../images/nat-4.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transform: skewY(-7deg);
+  margin-top: -120px;
+}
+.section-features > * {
+  transform: skewY(7deg);
+}
+
+.section-tours {
+  padding: 250px 0 150px;
+  background-color: #f7f7f7;
+  margin-top: -120px;
+}
+
+.btn, .btn:link, .btn:visited {
+  text-decoration: none;
+  padding: 15px 40px;
+  text-transform: uppercase;
+  font-size: 16px;
+  border-radius: 100px;
+  cursor: pointer;
+  display: inline-block;
+  transition: all 0.5s ease-in-out;
+  color: #777;
+  border: 0;
+  position: relative;
+}
+.btn-white {
+  background-color: white;
+  color: #777;
+}
+.btn:is(:active, :focus, :hover) {
+  transform: scale(1.1);
+}
+.btn-text, .btn-text:is(:linked, :visited) {
+  text-decoration: none;
+  font-size: 16x;
+  color: #55c57a;
+  cursor: pointer;
+  text-transform: capitalize;
+  padding: 3px;
+  display: inline-block;
+  border-bottom: 1px solid #55c57a;
+  transition: all 0.2s ease-in-out;
+}
+.btn-text:is(:hover, :focus, :active) {
+  background-color: #55c57a;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+.btn-text:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+.btn::after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  border-radius: 100px;
+  transition: all 0.4s ease-in-out;
+  background-color: inherit;
+}
+
+.btn:hover::after {
+  transform: scaleX(1.4) scaley(1.6);
+  opacity: 0;
+}
+
+@media all and (max-width: 768px) {
+  .btn {
+    padding: 15px 20px;
+    font-size: 10px;
+  }
+}
+.composition {
+  position: relative;
+}
+.composition-img {
+  width: 55%;
+  border-radius: 2px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+  position: absolute;
+  transition: all 0.3s ease-in-out;
+  outline-offset: 10px;
+}
+.composition-img-1 {
+  left: 0;
+  top: -20px;
+}
+.composition-img-2 {
+  right: 0;
+  top: 20px;
+}
+.composition-img-3 {
+  top: 100px;
+  left: 25%;
+}
+.composition-img:hover {
+  transform: scale(1.1);
+  z-index: 5;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+  outline: 15px solid #55c57a;
+}
+.composition:hover .composition-img:not(:hover, :active, :focus) {
+  transform: scale(0.9);
+}
+
+.features-box {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 25px;
+  border-radius: 3px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+}
+.features-box:is(:hover, :active, :focus) {
+  transform: scale(1.05) translateY(-15px);
+}
+.features-box > i {
+  font-size: 60px;
+  background-image: linear-gradient(to right, #7ed56a, rgba(40, 180, 133, 0.8));
+  background-clip: text;
+  color: transparent;
+}
+
+.card {
+  height: 520px;
+  position: relative;
+}
+.card-side {
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  backface-visibility: hidden;
+  transition: all 0.8s;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+.card-side-front {
+  background-color: white;
+}
+.card-side-back {
+  width: 100%;
+  transform: rotateY(180deg);
+}
+.card-side-back-1 {
+  background-color: #ffb900;
+}
+.card-side-back-2 {
+  background-color: #7ed56a;
+}
+.card-side-back-3 {
+  background-color: #2998ff;
+}
+.card .card-img {
+  height: 230px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  background-blend-mode: screen;
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+}
+.card .card-img-1 {
+  background-image: linear-gradient(#ffb900, #ff7730), url(../images/nat-5.jpg);
+}
+.card .card-img-2 {
+  background-image: linear-gradient(#7ed56a, rgba(40, 180, 133, 0.8)), url(../images/nat-6.jpg);
+}
+.card .card-img-3 {
+  background-image: linear-gradient(#2998ff, #5643fa), url(../images/nat-7.jpg);
+}
+.card:hover .card-side-front {
+  transform: perspective(1500px) rotateY(-180deg);
+}
+.card:hover .card-side-back {
+  transform: perspective(1500px) rotateY(0deg);
+}
+.card-heading {
+  position: absolute;
+  right: 20px;
+  top: 120px;
+  font-weight: 300;
+  text-transform: uppercase;
+  font-size: 25px;
+  width: 70%;
+  text-align: right;
+  color: white;
+}
+.card-heading-span {
+  padding: 0px 15px;
+  box-decoration-break: clone;
+}
+.card-heading-span-1 {
+  background-image: linear-gradient(to right bottom, #ffb900, #ff7730);
+}
+.card-heading-span-2 {
+  background-image: linear-gradient(to right bottom, #7ed56a, rgba(40, 180, 133, 0.8));
+}
+.card-heading-span-3 {
+  background-image: linear-gradient(to right bottom, #2998ff, #5643fa);
+}
+.card-details {
+  padding: 30px;
+}
+.card-details ul {
+  list-style: none;
+  width: 80%;
+  text-align: center;
+  margin: 0 auto;
+}
+.card-details ul li {
+  font-size: 16px;
+  text-transform: capitalize;
+  padding: 10px;
+}
+.card-details ul li:not(:last-child) {
+  border-bottom: 1px solid #f7f7f7;
+}
+.card .card-cta {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.card-price {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+}
+.card-price-only {
+  text-transform: uppercase;
+  margin-bottom: 100px;
+}
+.card-price-value {
+  font-size: 60px;
+  font-weight: 300;
+  margin-bottom: 60px;
+}
+
+/*# sourceMappingURL=style.css.map */
