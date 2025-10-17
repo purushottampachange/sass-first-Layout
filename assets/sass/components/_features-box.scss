@@ -14,7 +14,9 @@
 
     >i{
 
-        font-size: 60px;
+        display: inline-block;
         @include bgbutton;
+        font-size: 60px;
+        
     }
 }
