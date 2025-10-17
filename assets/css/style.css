@@ -305,10 +305,11 @@ body {
   transform: scale(1.05) translateY(-15px);
 }
 .features-box > i {
-  font-size: 60px;
+  display: inline-block;
   background-image: linear-gradient(to right, #7ed56a, rgba(40, 180, 133, 0.8));
   background-clip: text;
   color: transparent;
+  font-size: 60px;
 }
 
 .card {
