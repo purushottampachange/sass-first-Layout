@@ -125,6 +125,10 @@ body {
   text-align: center;
 }
 
+.mb-120 {
+  margin-bottom: 120px;
+}
+
 .container {
   width: 100%;
   max-width: 1000px;
@@ -282,6 +286,10 @@ body {
 .btn-white {
   background-color: white;
   color: #777;
+}
+.btn-green {
+  background-color: #55c57a;
+  color: #fff;
 }
 .btn:is(:active, :focus, :hover) {
   -webkit-transform: scale(1.1);
