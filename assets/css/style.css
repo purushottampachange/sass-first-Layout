@@ -81,8 +81,13 @@ body {
   text-align: center;
 }
 
+<<<<<<< HEAD
+.mb-120 {
+  margin-bottom: 120px;
+=======
 .mb-80 {
   margin-bottom: 80px;
+>>>>>>> 34a3b45a5a3a0182cfb8f6fe7739dfce8d244edf
 }
 
 .container {
@@ -442,6 +447,8 @@ body {
   margin-bottom: 60px;
 }
 
+<<<<<<< HEAD
+=======
 .bg-video {
   height: 100%;
   width: 100%;
@@ -512,4 +519,5 @@ body {
   opacity: 1;
 }
 
+>>>>>>> 34a3b45a5a3a0182cfb8f6fe7739dfce8d244edf
 /*# sourceMappingURL=style.css.map */
