@@ -81,8 +81,13 @@ body {
   text-align: center;
 }
 
+<<<<<<< HEAD
 .mb-120 {
   margin-bottom: 120px;
+=======
+.mb-80 {
+  margin-bottom: 80px;
+>>>>>>> 34a3b45a5a3a0182cfb8f6fe7739dfce8d244edf
 }
 
 .container {
@@ -197,6 +202,11 @@ body {
   padding: 250px 0 150px;
   background-color: #f7f7f7;
   margin-top: -120px;
+}
+
+.section-stories {
+  padding: 120px 0;
+  position: relative;
 }
 
 .btn, .btn:link, .btn:visited {
@@ -437,4 +447,77 @@ body {
   margin-bottom: 60px;
 }
 
+<<<<<<< HEAD
+=======
+.bg-video {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  opacity: 0.3;
+}
+.bg-video-content {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.story {
+  background-color: rgba(255, 255, 255, 0.7);
+  width: 80%;
+  margin: 0 auto;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+  transform: skewX(-10deg);
+  padding: 20px;
+}
+.story > * {
+  transform: skewX(10deg);
+}
+.story-shape {
+  width: 150px;
+  height: 150px;
+  clip-path: circle(50% at 50% 50%);
+  float: left;
+  shape-outside: circle(50% at 50% 50%);
+  margin-right: 40px;
+  position: relative;
+}
+.story-shape img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.4);
+  transition: all 0.4s ease-in-out;
+}
+.story-caption {
+  position: absolute;
+  left: 50%;
+  top: 130%;
+  z-index: 1;
+  color: white;
+  text-align: center;
+  width: 100%;
+  transform: translate(-50%, -50%);
+  text-transform: uppercase;
+  transition: all 0.3s ease-in-out;
+  opacity: 0;
+}
+.story-details h3 {
+  text-transform: uppercase;
+  margin-bottom: 25px;
+  font-size: 16px;
+}
+.story:is(:hover, :active, :focus) img {
+  transform: scale(1);
+  filter: blur(2px) brightness(0.8);
+}
+.story:is(:hover, :active, :focus) .story-caption {
+  top: 50%;
+  opacity: 1;
+}
+
+>>>>>>> 34a3b45a5a3a0182cfb8f6fe7739dfce8d244edf
 /*# sourceMappingURL=style.css.map */
